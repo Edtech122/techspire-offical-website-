@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechSpire Training Placement Pvt. Ltd. - Empowering Skills. Building Careers.</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .main-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Header & Navigation */
+    .header {
+      background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%);
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+
+    .nav-menu a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .login-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #06b6d4;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0891b2;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #0a2463;
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #ffffff, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .trust-badges {
+      margin-top: 4rem;
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .badge-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* Sections */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.8rem;
+      color: #0a2463;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Stats Section */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(10, 36, 99, 0.15);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #06b6d4;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* Programs Grid */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .program-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(10, 36, 99, 0.15);
+    }
+
+    .program-header {
+      background: linear-gradient(135deg, #0a2463, #1e3a8a);
+      color: white;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .program-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .program-body {
+      padding: 2rem;
+    }
+
+    .program-title {
+      font-size: 1.5rem;
+      color: #0a2463;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .program-details {
+      color: #64748b;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .program-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* LMS Dashboard */
+    .lms-container {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+
+    .lms-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .lms-title {
+      font-size: 2rem;
+      color: #0a2463;
+      font-weight: 700;
+    }
+
+    .lms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .lms-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s;
+    }
+
+    .lms-card:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .lms-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .lms-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .lms-card-title {
+      font-size: 1.3rem;
+      color: #0a2463;
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #06b6d4, #0891b2);
+      border-radius: 10px;
+      transition: width 0.3s;
+    }
+
+    /* Login Pages */
+    .login-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      padding: 4rem 2rem;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .login-card {
+      background: white;
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s;
+    }
+
+    .login-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .login-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #0a2463, #06b6d4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .login-title {
+      font-size: 1.8rem;
+      color: #0a2463;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .login-subtitle {
+      color: #64748b;
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #334155;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #06b6d4;
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #0a2463, #1e3a8a);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(10, 36, 99, 0.3);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: -15px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      background: #06b6d4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .testimonial-text {
+      margin: 2rem 0 1.5rem 0;
+      color: #475569;
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0a2463, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .author-info h4 {
+      color: #152c61;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .author-info p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Partners */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .partner-logo {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s;
+      min-height: 120px;
+    }
+
+    .partner-logo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .partner-name {
+      font-weight: 700;
+      color: #0a2463;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .contact-icon-wrapper {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #0a2463, #06b6d4);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .contact-details h3 {
+      color: #0a2463;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-details p {
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    textarea.form-input {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 100%);
+      color: white;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #06b6d4;
+      padding-left: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .social-icon:hover {
+      background: #06b6d4;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .login-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="main-wrapper"><!-- Header -->
+   <header class="header">
+    <nav class="nav-container">
+     <div class="logo">
+      <svg class="logo-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#06b6d4" /> <path d="M2 17L12 22L22 17" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" /> <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" />
+      </svg> TechSpire
+     </div>
+     <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#lms">LMS</a></li>
+      <li><a href="#placement">Placement</a></li>
+      <li><a href="#contact">Contact</a></li>
+     </ul>
+     <div class="login-buttons"><a href="#login" class="btn btn-secondary">Login</a> <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+     </div>
+    </nav>
+   </header><!-- Hero Section -->
+   <section id="home" class="hero">
+    <div class="hero-content">
+     <h1 id="hero-tagline">Empowering Skills. Building Careers.</h1>
+     <p id="hero-subtitle">Professional training programs, industry internships, and guaranteed placement support. Recognized by MSME &amp; Startup India.</p>
+     <div class="hero-buttons"><button class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Start Your Journey</button> <button class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Explore Programs</button>
+     </div>
+     <div class="trust-badges">
+      <div class="badge">
+       <svg class="badge-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" />
+       </svg><span style="font-weight: 600;">MSME Certified</span>
+      </div>
+      <div class="badge">
+       <svg class="badge-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14H11L11 21L20 10L13 10Z" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+       </svg><span style="font-weight: 600;">Startup India</span>
+      </div>
+      <div class="badge">
+       <svg class="badge-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#fbbf24" />
+       </svg><span style="font-weight: 600;">500+ MoU Colleges</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Stats Section -->
+   <section class="section" style="background: white;">
+    <div class="stats-grid">
+     <div class="stat-card">
+      <div class="stat-number">
+       10,000+
+      </div>
+      <div class="stat-label">
+       Students Trained
+      </div>
+     </div>
+     <div class="stat-card">
+      <div class="stat-number">
+       500+
+      </div>
+      <div class="stat-label">
+       Placement Partners
+      </div>
+     </div>
+     <div class="stat-card">
+      <div class="stat-number">
+       50+
+      </div>
+      <div class="stat-label">
+       Training Programs
+      </div>
+     </div>
+     <div class="stat-card">
+      <div class="stat-number">
+       95%
+      </div>
+      <div class="stat-label">
+       Placement Rate
+      </div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="section">
+    <div class="section-header">
+     <h2>About TechSpire</h2>
+     <p id="company-intro">TechSpire Training Placement Pvt. Ltd. is a leading EdTech company dedicated to bridging the gap between education and employment through world-class training programs and internship opportunities.</p>
+    </div>
+    <div style="background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+      <div>
+       <h3 style="color: #0a2463; font-size: 1.8rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#06b6d4" stroke-width="2" /> <path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2Z" stroke="#06b6d4" stroke-width="2" />
+        </svg> Our Vision</h3>
+       <p style="color: #64748b; line-height: 1.8;" id="mission-text">To become India's most trusted training and placement partner, empowering students with cutting-edge skills and connecting them with top companies for successful careers.</p>
+      </div>
+      <div>
+       <h3 style="color: #0a2463; font-size: 1.8rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#06b6d4" stroke-width="2" />
+        </svg> Our Mission</h3>
+       <p style="color: #64748b; line-height: 1.8;">To bridge the gap between academic knowledge and industry requirements through practical training, real-world projects, and guaranteed placement opportunities.</p>
+      </div>
+     </div>
+     <div style="border-top: 2px solid #e2e8f0; padding-top: 3rem;">
+      <h3 style="color: #0a2463; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Founder &amp; CEO</h3>
+      <div style="display: flex; align-items: center; gap: 2rem; max-width: 700px; margin: 0 auto;">
+       <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #0a2463, #06b6d4); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700; flex-shrink: 0;">
+        TS
+       </div>
+       <div>
+        <h4 style="color: #0a2463; font-size: 1.5rem; margin-bottom: 0.5rem;">Founder Name</h4>
+        <p style="color: #64748b; line-height: 1.8;">Visionary entrepreneur with 15+ years of experience in EdTech and corporate training, committed to transforming careers through quality education.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Programs Section -->
+   <section id="programs" class="section" style="background: white;">
+    <div class="section-header">
+     <h2>Training &amp; Internship Programs</h2>
+     <p>Industry-relevant courses designed to make you job-ready with hands-on experience and certifications.</p>
+    </div>
+    <div class="programs-grid">
+     <div class="program-card">
+      <div class="program-header">
+       <svg class="program-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 17L9 20L12 18L15 20L14.25 17M3 13H21M5 17H19C20.1046 17 21 16.1046 21 15V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V15C3 16.1046 3.89543 17 5 17Z" stroke="white" stroke-width="2" stroke-linecap="round" />
+       </svg>
+       <div>
+        <div style="font-size: 1.5rem; font-weight: 700;">
+         Artificial Intelligence &amp; ML
+        </div>
+       </div>
+      </div>
+      <div class="program-body">
+       <p class="program-details">Master AI algorithms, machine learning models, neural networks, and deep learning. Work on real-world projects with industry mentors.</p>
+       <div class="program-meta">
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>6 Months</span>
+        </div>
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>Certificate</span>
+        </div>
+       </div><button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enroll Now</button>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-header">
+       <svg class="program-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8V16M12 11V16M8 14V16M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="white" stroke-width="2" stroke-linecap="round" />
+       </svg>
+       <div>
+        <div style="font-size: 1.5rem; font-weight: 700;">
+         Data Science &amp; Analytics
+        </div>
+       </div>
+      </div>
+      <div class="program-body">
+       <p class="program-details">Learn Python, R, SQL, data visualization, statistical analysis, and predictive modeling. Build industry-ready data science portfolios.</p>
+       <div class="program-meta">
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>5 Months</span>
+        </div>
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>Certificate</span>
+        </div>
+       </div><button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enroll Now</button>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-header">
+       <svg class="program-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 20L14 4M18 8L22 12L18 16M6 16L2 12L6 8" stroke="white" stroke-width="2" stroke-linecap="round" />
+       </svg>
+       <div>
+        <div style="font-size: 1.5rem; font-weight: 700;">
+         Full Stack Development
+        </div>
+       </div>
+      </div>
+      <div class="program-body">
+       <p class="program-details">Master frontend and backend technologies - React, Node.js, MongoDB, Express. Build complete web applications from scratch.</p>
+       <div class="program-meta">
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>6 Months</span>
+        </div>
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>Certificate</span>
+        </div>
+       </div><button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enroll Now</button>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-header">
+       <svg class="program-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L12 3M12 15L8 11M12 15L16 11M2 17L3.5 21L12 17L20.5 21L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+       </svg>
+       <div>
+        <div style="font-size: 1.5rem; font-weight: 700;">
+         Cloud Computing &amp; DevOps
+        </div>
+       </div>
+      </div>
+      <div class="program-body">
+       <p class="program-details">Learn AWS, Azure, Docker, Kubernetes, CI/CD pipelines. Get certified and job-ready for cloud infrastructure roles.</p>
+       <div class="program-meta">
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>4 Months</span>
+        </div>
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>Certificate</span>
+        </div>
+       </div><button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enroll Now</button>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-header">
+       <svg class="program-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11ZM12 11C7.58172 11 4 13.4624 4 16.5V21H20V16.5C20 13.4624 16.4183 11 12 11Z" stroke="white" stroke-width="2" stroke-linecap="round" />
+       </svg>
+       <div>
+        <div style="font-size: 1.5rem; font-weight: 700;">
+         Cyber Security
+        </div>
+       </div>
+      </div>
+      <div class="program-body">
+       <p class="program-details">Ethical hacking, network security, penetration testing, and security operations. Become a certified cybersecurity professional.</p>
+       <div class="program-meta">
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>5 Months</span>
+        </div>
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>Certificate</span>
+        </div>
+       </div><button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enroll Now</button>
+      </div>
+     </div>
+     <div class="program-card">
+      <div class="program-header">
+       <svg class="program-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="white" stroke-width="2" stroke-linecap="round" />
+       </svg>
+       <div>
+        <div style="font-size: 1.5rem; font-weight: 700;">
+         Digital Marketing
+        </div>
+       </div>
+      </div>
+      <div class="program-body">
+       <p class="program-details">SEO, SEM, social media marketing, content marketing, Google Analytics. Master digital marketing strategies and tools.</p>
+       <div class="program-meta">
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>3 Months</span>
+        </div>
+        <div class="meta-item">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#64748b" stroke-width="2" />
+         </svg><span>Certificate</span>
+        </div>
+       </div><button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enroll Now</button>
+      </div>
+     </div>
+    </div>
+   </section><!-- LMS Section -->
+   <section id="lms" class="section">
+    <div class="section-header">
+     <h2>Learning Management System</h2>
+     <p>Access your courses, assignments, and track your progress with our advanced LMS platform.</p>
+    </div>
+    <div class="lms-container">
+     <div class="lms-header">
+      <div class="lms-title">
+       Student Dashboard
+      </div><button class="btn btn-primary">Access LMS</button>
+     </div>
+     <div class="lms-grid">
+      <div class="lms-card">
+       <div class="lms-card-header">
+        <svg class="lms-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 10L11 13L17 19L21 10H3L7 19L13 13L9 10" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M12 3V10" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <div class="lms-card-title">
+         Video Lectures
+        </div>
+       </div>
+       <p style="color: #64748b; margin-bottom: 1rem;">Access 200+ hours of recorded lectures</p>
+       <div class="progress-bar">
+        <div class="progress-fill" style="width: 65%;"></div>
+       </div>
+       <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">65% Complete</p>
+      </div>
+      <div class="lms-card">
+       <div class="lms-card-header">
+        <svg class="lms-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12H15M9 16H15M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H12.5858C12.851 3 13.1054 3.10536 13.2929 3.29289L18.7071 8.70711C18.8946 8.89464 19 9.149 19 9.41421V19C19 20.1046 18.1046 21 17 21Z" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <div class="lms-card-title">
+         Assignments
+        </div>
+       </div>
+       <p style="color: #64748b; margin-bottom: 1rem;">12 assignments | 3 pending submissions</p>
+       <div class="progress-bar">
+        <div class="progress-fill" style="width: 75%;"></div>
+       </div>
+       <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">75% Submitted</p>
+      </div>
+      <div class="lms-card">
+       <div class="lms-card-header">
+        <svg class="lms-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <div class="lms-card-title">
+         Quizzes
+        </div>
+       </div>
+       <p style="color: #64748b; margin-bottom: 1rem;">8 quizzes completed | Average: 88%</p>
+       <div class="progress-bar">
+        <div class="progress-fill" style="width: 88%;"></div>
+       </div>
+       <p style="color: #64748b; font-size: 0.9rem; margin-top: 0.5rem;">88% Score</p>
+      </div>
+      <div class="lms-card">
+       <div class="lms-card-header">
+        <svg class="lms-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#06b6d4" stroke-width="2" />
+        </svg>
+        <div class="lms-card-title">
+         Certificates
+        </div>
+       </div>
+       <p style="color: #64748b; margin-bottom: 1rem;">3 certificates earned</p><button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Download</button>
+      </div>
+     </div>
+    </div>
+   </section><!-- Login Section -->
+   <section id="login" class="login-section">
+    <div style="max-width: 1400px; margin: 0 auto; width: 100%;">
+     <h2 style="text-align: center; color: white; font-size: 2.8rem; margin-bottom: 3rem; font-weight: 700;">Login Portals</h2>
+     <div class="login-container"><!-- Student Login -->
+      <div class="login-card">
+       <div class="login-header">
+        <div class="login-icon-wrapper">
+         <svg class="login-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="white" stroke-width="2" /> <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="white" stroke-width="2" />
+         </svg>
+        </div>
+        <h3 class="login-title">Student Login</h3>
+        <p class="login-subtitle">Access your courses and assignments</p>
+       </div>
+       <form onsubmit="event.preventDefault(); showMessage('student');">
+        <div class="form-group"><label class="form-label" for="student-email">Email Address</label> <input type="email" id="student-email" class="form-input" placeholder="student@example.com" required>
+        </div>
+        <div class="form-group"><label class="form-label" for="student-password">Password</label> <input type="password" id="student-password" class="form-input" placeholder="Enter your password" required>
+        </div><button type="submit" class="btn-login">Login to Dashboard</button>
+        <p style="text-align: center; margin-top: 1.5rem; color: #64748b;">Don't have an account? <a href="#enroll" style="color: #06b6d4; text-decoration: none; font-weight: 600;">Register Now</a></p>
+       </form>
+      </div><!-- Faculty Login -->
+      <div class="login-card">
+       <div class="login-header">
+        <div class="login-icon-wrapper">
+         <svg class="login-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 14L21 9L12 4L3 9L12 14ZM12 14L18.1591 10.5783C18.7017 11.9466 19 13.4384 19 15C19 15.3407 18.9896 15.6787 18.9694 16.0135M12 14L5.84086 10.5783C5.29825 11.9466 5 13.4384 5 15C5 15.3407 5.01038 15.6787 5.03063 16.0135M6 20.0135C6.65867 21.2235 7.64944 22 9 22C10.3506 22 11.3413 21.2235 12 20.0135M12 20.0135C12.6587 21.2235 13.6494 22 15 22C16.3506 22 17.3413 21.2235 18 20.0135M12 20.0135V14" stroke="white" stroke-width="2" stroke-linecap="round" />
+         </svg>
+        </div>
+        <h3 class="login-title">Faculty Login</h3>
+        <p class="login-subtitle">Manage courses and students</p>
+       </div>
+       <form onsubmit="event.preventDefault(); showMessage('faculty');">
+        <div class="form-group"><label class="form-label" for="faculty-email">Faculty Email</label> <input type="email" id="faculty-email" class="form-input" placeholder="faculty@techspire.in" required>
+        </div>
+        <div class="form-group"><label class="form-label" for="faculty-password">Password</label> <input type="password" id="faculty-password" class="form-input" placeholder="Enter your password" required>
+        </div><button type="submit" class="btn-login">Access Faculty Portal</button>
+        <p style="text-align: center; margin-top: 1.5rem; color: #64748b;">Need access? <a href="#contact" style="color: #06b6d4; text-decoration: none; font-weight: 600;">Contact Admin</a></p>
+       </form>
+      </div><!-- Staff/Admin Login -->
+      <div class="login-card">
+       <div class="login-header">
+        <div class="login-icon-wrapper">
+         <svg class="login-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.325 4.317C10.751 2.561 13.249 2.561 13.675 4.317C13.7389 4.5808 13.8642 4.82578 14.0407 5.032C14.2172 5.23822 14.4399 5.39985 14.6907 5.50375C14.9414 5.60764 15.2132 5.65085 15.4838 5.62987C15.7544 5.60889 16.0162 5.5243 16.248 5.383C17.791 4.443 19.558 6.209 18.618 7.753C18.4769 7.98466 18.3924 8.24634 18.3715 8.51677C18.3506 8.78721 18.3938 9.05877 18.4975 9.30938C18.6013 9.55999 18.7627 9.78258 18.9687 9.95905C19.1747 10.1355 19.4194 10.2609 19.683 10.325C21.439 10.751 21.439 13.249 19.683 13.675C19.4192 13.7389 19.1742 13.8642 18.968 14.0407C18.7618 14.2172 18.6001 14.4399 18.4963 14.6907C18.3924 14.9414 18.3491 15.2132 18.3701 15.4838C18.3911 15.7544 18.4757 16.0162 18.617 16.248C19.557 17.791 17.791 19.558 16.247 18.618C16.0153 18.4769 15.7537 18.3924 15.4832 18.3715C15.2128 18.3506 14.9412 18.3938 14.6906 18.4975C14.44 18.6013 14.2174 18.7627 14.0409 18.9687C13.8645 19.1747 13.7391 19.4194 13.675 19.683C13.249 21.439 10.751 21.439 10.325 19.683C10.2611 19.4192 10.1358 19.1742 9.95929 18.968C9.7828 18.7618 9.56011 18.6001 9.30935 18.4963C9.05859 18.3924 8.78683 18.3491 8.51621 18.3701C8.24559 18.3911 7.98375 18.4757 7.752 18.617C6.209 19.557 4.442 17.791 5.382 16.247C5.5231 16.0153 5.60755 15.7537 5.62848 15.4832C5.64942 15.2128 5.60624 14.9412 5.50247 14.6906C5.3987 14.44 5.23726 14.2174 5.03127 14.0409C4.82529 13.8645 4.58056 13.7391 4.317 13.675C2.561 13.249 2.561 10.751 4.317 10.325C4.5808 10.2611 4.82578 10.1358 5.032 9.95929C5.23822 9.7828 5.39985 9.56011 5.50375 9.30935C5.60764 9.05859 5.65085 8.78683 5.62987 8.51621C5.60889 8.24559 5.5243 7.98375 5.383 7.752C4.443 6.209 6.209 4.442 7.753 5.382C8.753 5.99 10.049 5.452 10.325 4.317Z" stroke="white" stroke-width="2" /> <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="white" stroke-width="2" />
+         </svg>
+        </div>
+        <h3 class="login-title">Staff / Admin Login</h3>
+        <p class="login-subtitle">Manage system and operations</p>
+       </div>
+       <form onsubmit="event.preventDefault(); showMessage('admin');">
+        <div class="form-group"><label class="form-label" for="admin-email">Admin Email</label> <input type="email" id="admin-email" class="form-input" placeholder="admin@techspire.in" required>
+        </div>
+        <div class="form-group"><label class="form-label" for="admin-password">Password</label> <input type="password" id="admin-password" class="form-input" placeholder="Enter your password" required>
+        </div><button type="submit" class="btn-login">Access Admin Panel</button>
+        <p style="text-align: center; margin-top: 1.5rem; color: #64748b;"><a href="#contact" style="color: #06b6d4; text-decoration: none; font-weight: 600;">Technical Support</a></p>
+       </form>
+      </div>
+     </div>
+    </div>
+   </section><!-- Placement Section -->
+   <section id="placement" class="section" style="background: white;">
+    <div class="section-header">
+     <h2>Placement Cell</h2>
+     <p>We connect talented students with top companies for assured career opportunities.</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #0f172a, #1e3a8a); padding: 4rem; border-radius: 20px; margin-bottom: 4rem;">
+     <h3 style="color: white; font-size: 2rem; text-align: center; margin-bottom: 3rem;">Our Placement Process</h3>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+      <div style="text-align: center;">
+       <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: rgba(6, 182, 212, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #06b6d4; font-size: 2rem; font-weight: 700;">
+        1
+       </div>
+       <h4 style="color: white; margin-bottom: 0.5rem;">Resume Building</h4>
+       <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Professional resume creation support</p>
+      </div>
+      <div style="text-align: center;">
+       <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: rgba(6, 182, 212, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #06b6d4; font-size: 2rem; font-weight: 700;">
+        2
+       </div>
+       <h4 style="color: white; margin-bottom: 0.5rem;">Interview Prep</h4>
+       <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Mock interviews and training</p>
+      </div>
+      <div style="text-align: center;">
+       <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: rgba(6, 182, 212, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #06b6d4; font-size: 2rem; font-weight: 700;">
+        3
+       </div>
+       <h4 style="color: white; margin-bottom: 0.5rem;">Company Connect</h4>
+       <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Direct placement drives</p>
+      </div>
+      <div style="text-align: center;">
+       <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: rgba(6, 182, 212, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #06b6d4; font-size: 2rem; font-weight: 700;">
+        4
+       </div>
+       <h4 style="color: white; margin-bottom: 0.5rem;">Job Placement</h4>
+       <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Secure your dream role</p>
+      </div>
+     </div>
+    </div>
+    <h3 style="color: #0a2463; font-size: 2rem; text-align: center; margin-bottom: 2rem;">Our Hiring Partners</h3>
+    <div class="partners-grid">
+     <div class="partner-logo">
+      <div class="partner-name">
+       TCS
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Infosys
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Wipro
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Accenture
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Cognizant
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Tech Mahindra
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Amazon
+      </div>
+     </div>
+     <div class="partner-logo">
+      <div class="partner-name">
+       Google
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials -->
+   <section class="section">
+    <div class="section-header">
+     <h2>Student Success Stories</h2>
+     <p>Hear from our alumni who transformed their careers with TechSpire.</p>
+    </div>
+    <div class="testimonials-grid">
+     <div class="testimonial-card">
+      <div class="quote-icon">
+       "
+      </div>
+      <p class="testimonial-text">TechSpire's AI/ML program changed my career completely. The hands-on projects and placement support helped me land a role at a top tech company within 2 months of completing the course.</p>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        RK
+       </div>
+       <div class="author-info">
+        <h4>Rahul Kumar</h4>
+        <p>AI Engineer at Tech Corp</p>
+        <div class="stars">
+         ★★★★★
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card">
+      <div class="quote-icon">
+       "
+      </div>
+      <p class="testimonial-text">The LMS platform made learning so convenient. I could access lectures anytime and the faculty support was outstanding. Highly recommend TechSpire for anyone serious about tech careers.</p>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        PS
+       </div>
+       <div class="author-info">
+        <h4>Priya Sharma</h4>
+        <p>Data Analyst at Analytics Inc</p>
+        <div class="stars">
+         ★★★★★
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card">
+      <div class="quote-icon">
+       "
+      </div>
+      <p class="testimonial-text">From zero coding knowledge to becoming a full-stack developer - TechSpire made it possible. The mentors are industry experts and the curriculum is perfectly designed for beginners.</p>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        AM
+       </div>
+       <div class="author-info">
+        <h4>Amit Mehta</h4>
+        <p>Full Stack Developer at StartupXYZ</p>
+        <div class="stars">
+         ★★★★★
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="section" style="background: white;">
+    <div class="section-header">
+     <h2>Get In Touch</h2>
+     <p>Have questions? We're here to help you start your learning journey.</p>
+    </div>
+    <div class="contact-container">
+     <div class="contact-info">
+      <div class="contact-item">
+       <div class="contact-icon-wrapper">
+        <svg class="contact-item-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+       </div>
+       <div class="contact-details">
+        <h3>Email Us</h3>
+        <p id="contact-email">info@techspire.in</p>
+        <p>support@techspire.in</p>
+       </div>
+      </div>
+      <div class="contact-item">
+       <div class="contact-icon-wrapper">
+        <svg class="contact-item-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <div class="contact-details">
+        <h3>Call Us</h3>
+        <p id="contact-phone">+91 98765 43210</p>
+        <p>Mon-Sat: 9:00 AM - 6:00 PM</p>
+       </div>
+      </div>
+      <div class="contact-item">
+       <div class="contact-icon-wrapper">
+        <svg class="contact-item-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9C12.6332 21.6808 11.4737 22.1213 10.267 22.1213C9.06031 22.1213 7.90084 21.6808 7.12 20.9L3.707 17.486C2.92617 16.7052 2.48566 15.5457 2.48566 14.339C2.48566 13.1323 2.92617 11.9728 3.707 11.192L7.95 6.95C8.63618 6.26382 9.5508 5.87721 10.506 5.87721C11.4612 5.87721 12.3758 6.26382 13.062 6.95L16.476 10.364C17.1622 11.0502 17.5488 11.9648 17.5488 12.92C17.5488 13.8752 17.1622 14.7898 16.476 15.476L13.414 12.414L16.657 16.657ZM17.657 16.657L21 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+       </div>
+       <div class="contact-details">
+        <h3>Visit Us</h3>
+        <p id="contact-address">TechSpire Training Center, 3rd Floor, Tech Park, Electronic City, Bangalore - 560100, Karnataka, India</p>
+       </div>
+      </div>
+     </div>
+     <div class="contact-form">
+      <h3 style="color: #0a2463; font-size: 1.8rem; margin-bottom: 2rem;">Send us a Message</h3>
+      <form onsubmit="event.preventDefault(); handleContactForm();">
+       <div class="form-row">
+        <div class="form-group"><label class="form-label" for="name">Full Name</label> <input type="text" id="name" class="form-input" placeholder="Your name" required>
+        </div>
+        <div class="form-group"><label class="form-label" for="email">Email Address</label> <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+        </div>
+       </div>
+       <div class="form-group"><label class="form-label" for="phone">Phone Number</label> <input type="tel" id="phone" class="form-input" placeholder="+91 xxxxx xxxxx" required>
+       </div>
+       <div class="form-group"><label class="form-label" for="message">Message</label> <textarea id="message" class="form-input" placeholder="How can we help you?" required></textarea>
+       </div><button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Send Message</button>
+      </form>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="footer">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>TechSpire Training</h3>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Empowering careers through quality education and industry connections.</p>
+      <div class="social-links">
+       <div class="social-icon" onclick="window.open('https://linkedin.com', '_blank', 'noopener,noreferrer')">
+        <svg width="20" height="20" viewbox="0 0 24 24" fill="white">
+         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg>
+       </div>
+       <div class="social-icon" onclick="window.open('https://twitter.com', '_blank', 'noopener,noreferrer')">
+        <svg width="20" height="20" viewbox="0 0 24 24" fill="white">
+         <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+        </svg>
+       </div>
+       <div class="social-icon" onclick="window.open('https://facebook.com', '_blank', 'noopener,noreferrer')">
+        <svg width="20" height="20" viewbox="0 0 24 24" fill="white">
+         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+       </div>
+       <div class="social-icon" onclick="window.open('https://instagram.com', '_blank', 'noopener,noreferrer')">
+        <svg width="20" height="20" viewbox="0 0 24 24" fill="white">
+         <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+        </svg>
+       </div>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+       <li><a href="#about">About Us</a></li>
+       <li><a href="#programs">Programs</a></li>
+       <li><a href="#lms">LMS Portal</a></li>
+       <li><a href="#placement">Placements</a></li>
+       <li><a href="#contact">Contact</a></li>
+      </ul>
+     </div>
+     <div class="footer-section">
+      <h3>Programs</h3>
+      <ul>
+       <li><a href="#programs">AI &amp; Machine Learning</a></li>
+       <li><a href="#programs">Data Science</a></li>
+       <li><a href="#programs">Full Stack Development</a></li>
+       <li><a href="#programs">Cloud Computing</a></li>
+       <li><a href="#programs">Cyber Security</a></li>
+      </ul>
+     </div>
+     <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+       <li><a href="#contact">Help Center</a></li>
+       <li><a href="#contact">Student Support</a></li>
+       <li><a href="#contact">Faculty Support</a></li>
+       <li><a href="#contact">Technical Support</a></li>
+       <li><a href="#contact">FAQs</a></li>
+      </ul>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2024 TechSpire Training Placement Pvt. Ltd. All rights reserved. | MSME &amp; Startup India Recognized</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Element SDK Configuration
+    const defaultConfig = {
+      hero_tagline: "Empowering Skills. Building Careers.",
+      hero_subtitle: "Professional training programs, industry internships, and guaranteed placement support. Recognized by MSME & Startup India.",
+      company_intro: "TechSpire Training Placement Pvt. Ltd. is a leading EdTech company dedicated to bridging the gap between education and employment through world-class training programs and internship opportunities.",
+      mission_text: "To become India's most trusted training and placement partner, empowering students with cutting-edge skills and connecting them with top companies for successful careers.",
+      contact_email: "info@techspire.in",
+      contact_phone: "+91 98765 43210",
+      contact_address: "TechSpire Training Center, 3rd Floor, Tech Park, Electronic City, Bangalore - 560100, Karnataka, India"
+    };
+
+    async function onConfigChange(config) {
+      document.getElementById('hero-tagline').textContent = config.hero_tagline || defaultConfig.hero_tagline;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('company-intro').textContent = config.company_intro || defaultConfig.company_intro;
+      document.getElementById('mission-text').textContent = config.mission_text || defaultConfig.mission_text;
+      document.getElementById('contact-email').textContent = config.contact_email || defaultConfig.contact_email;
+      document.getElementById('contact-phone').textContent = config.contact_phone || defaultConfig.contact_phone;
+      document.getElementById('contact-address').textContent = config.contact_address || defaultConfig.contact_address;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_tagline", config.hero_tagline || defaultConfig.hero_tagline],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["company_intro", config.company_intro || defaultConfig.company_intro],
+        ["mission_text", config.mission_text || defaultConfig.mission_text],
+        ["contact_email", config.contact_email || defaultConfig.contact_email],
+        ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
+        ["contact_address", config.contact_address || defaultConfig.contact_address]
+      ]);
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Form handlers with inline feedback
+    function showMessage(type) {
+      const messages = {
+        student: 'Student login functionality will be connected to the authentication system.',
+        faculty: 'Faculty login functionality will be connected to the authentication system.',
+        admin: 'Admin login functionality will be connected to the authentication system.'
+      };
+      
+      const messageDiv = document.createElement('div');
+      messageDiv.textContent = messages[type];
+      messageDiv.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #06b6d4; color: white; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); z-index: 10000; animation: slideIn 0.3s ease;';
+      
+      document.body.appendChild(messageDiv);
+      
+      setTimeout(() => {
+        messageDiv.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => messageDiv.remove(), 300);
+      }, 3000);
+    }
+
+    function handleContactForm() {
+      const messageDiv = document.createElement('div');
+      messageDiv.textContent = 'Thank you for your message! We will get back to you soon.';
+      messageDiv.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #06b6d4; color: white; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); z-index: 10000; animation: slideIn 0.3s ease;';
+      
+      document.body.appendChild(messageDiv);
+      
+      // Clear form
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('message').value = '';
+      
+      setTimeout(() => {
+        messageDiv.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => messageDiv.remove(), 300);
+      }, 3000);
+    }
+
+    // Add animation styles
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideIn {
+        from {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9aec64c0067fa834',t:'MTc2NTg2OTM2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
